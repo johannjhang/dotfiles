@@ -161,6 +161,15 @@ return {
   },
 
   {
+    'Kicamon/markdown-table-mode.nvim',
+    config = function()
+      require('markdown-table-mode').setup({
+        options = { pad_separator_line = true },
+      })
+    end,
+  },
+
+  {
     "mason-org/mason-lspconfig.nvim",
     opts = {
       ensure_installed = { "lua_ls", "rust_analyzer" },
