@@ -169,7 +169,7 @@ install() {
     install_target "home/.p10k-no-nerd-font.zsh" "${HOME}/.p10k.zsh"
   fi
 
-  install_target "home/.config/wezterm/wezterm.lua"
+  install_target "home/.wezterm.lua"
   install_target "home/.config/wezterm/color_scheme"
   install_target "home/.config/wezterm/font"
   install_target "home/.config/wezterm/font_size"
@@ -289,7 +289,7 @@ uninstall() {
 
   uninstall_target "${HOME}/.config/fish/conf.d/johannchang.fish"
 
-  uninstall_target "${HOME}/.config/wezterm/wezterm.lua"
+  uninstall_target "${HOME}/.wezterm.lua"
   uninstall_target "${HOME}/.config/wezterm/color_scheme"
   uninstall_target "${HOME}/.config/wezterm/font"
   uninstall_target "${HOME}/.config/wezterm/font_size"
