@@ -289,6 +289,7 @@ return {
       vim.keymap.set("n", "<LEADER>fg", "<CMD>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
       vim.keymap.set("n", "<LEADER>fw", "<CMD>lua require('telescope.builtin').grep_string()<CR>", { noremap = true })
       vim.keymap.set("n", "<LEADER>fb", "<CMD>lua require('telescope.builtin').buffers({ sort_mru = true })<CR>", { noremap = true })
+      vim.keymap.set("n", "<LEADER>f/", "<CMD>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", { noremap = true })
 
       vim.keymap.set("n", "<LEADER>gd", "<CMD>lua require('telescope.builtin').lsp_definitions({ reuse_win = true })<CR>", { noremap = true })
       vim.keymap.set("n", "<LEADER>gr", "<CMD>Telescope lsp_references<CR>", { noremap = true })
