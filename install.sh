@@ -131,7 +131,7 @@ install() {
       ;;
   esac
 
-  install_target "home/bin.d/johannchang"
+  install_target "home/bin.d/johannjhang"
 
   install_target "home/.zshenv"
   install_target "home/.zshrc"
@@ -139,7 +139,7 @@ install() {
     install_target "home/.zshrc.light"
   fi
 
-  install_target "home/.config/fish/conf.d/johannchang.fish"
+  install_target "home/.config/fish/conf.d/johannjhang.fish"
 
   if [ "$bg" = "light" ]; then
     install_target "home/.config/dircolors/dircolors.light" "${HOME}/.config/dircolors/dircolors"
@@ -280,14 +280,14 @@ uninstall_target() {
 }
 
 uninstall() {
-  uninstall_target "${HOME}/bin.d/johannchang"
+  uninstall_target "${HOME}/bin.d/johannjhang"
 
   uninstall_target "${HOME}/.p10k.zsh"
   uninstall_target "${HOME}/.zshenv"
   uninstall_target "${HOME}/.zshrc"
   uninstall_target "${HOME}/.zshrc.light"
 
-  uninstall_target "${HOME}/.config/fish/conf.d/johannchang.fish"
+  uninstall_target "${HOME}/.config/fish/conf.d/johannjhang.fish"
 
   uninstall_target "${HOME}/.wezterm.lua"
   uninstall_target "${HOME}/.config/wezterm/color_scheme"

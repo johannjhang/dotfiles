@@ -8,5 +8,5 @@
 	path = 3rdparties/tpm
 	url = https://github.com/tmux-plugins/tpm.git
 [submodule "3rdparties/bin-johannchang"]
-	path = 3rdparties/bin-johannchang
+	path = 3rdparties/bin-johannjhang
 	url = https://github.com/mrjohannchang/bin.git
