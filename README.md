@@ -140,7 +140,7 @@
 13. [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 14. [NeoSolarized](https://github.com/Tsuzat/NeoSolarized.nvim)
 15. [nvim-cmp](https://github.com/hrsh7th/nvim-cmp/)
-16. [nvim-config-local](https://github.com/mrjohannchang/nvim-config-local)
+16. [nvim-config-local](https://github.com/johannjhang/nvim-config-local)
 17. [nvim-surround](https://github.com/kylechui/nvim-surround)
 18. [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 19. [trouble.nvim](https://github.com/folke/trouble.nvim)
@@ -579,7 +579,7 @@ WezTerm uses the same leader key as tmux by my design, to provide a consistent u
     ```
     mkdir ~/workspace
     cd ~/workspace
-    git clone https://github.com/mrjohannchang/dotfiles.git
+    git clone https://github.com/johannjhang/dotfiles.git
     cd dotfiles
     ```
 
