@@ -204,38 +204,45 @@ install() {
   esac
 
   # TODO: Highlight modifications will be done on existing config
+
+  if yes_or_no_question "Set Neovim as the default Git editor" y; then
+    git config --global core.editor nvim
+    git config --global diff.tool nvimdiff
+    git config --global difftool.nvimdiff.layout "LOCAL, REMOTE"
+    git config --global merge.tool nvimdiff
+    git config --global mergetool.nvimdiff.layout "(LOCAL, BASE, REMOTE) / MERGED"
+  fi
+
+  if yes_or_no_question "Set Visual Studio Code as the default Git editor"; then
+    git config --global core.editor vscode
+    git config --global diff.tool vscode
+    git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
+    git config --global merge.tool vscode
+    git config --global mergetool.vscode.cmd 'code --wait --merge $BASE $LOCAL $REMOTE $MERGED'
+  fi
+
   INFO "Listing Git config that will be installed below:"
   cat << EOF
 alias.show-tracked-ignored = "ls-files -i --exclude-standard"
-core.editor = nvim
 core.quotePath = false
 core.autocrlf = false
 core.safecrlf = warn
 color.ui = auto
 diff.algorithm = patience
-diff.tool = nvimdiff
 difftool.prompt = false
-difftool.nvimdiff.layout "LOCAL,REMOTE"
-merge.tool = nvimdiff
 mergetool.prompt = true
-mergetool.nvimdiff.layout "LOCAL,BASE,REMOTE / MERGED"
 pull.ff = only
 push.default = simple
 EOF
   if yes_or_no_question "Install the above Git config? (Cannot be undone)" y; then
     git config --global alias.show-tracked-ignored "ls-files -i --exclude-standard"
-    git config --global core.editor nvim
     git config --global core.quotePath false
     git config --global core.autocrlf false
     git config --global core.safecrlf warn
     git config --global color.ui auto
     git config --global diff.algorithm patience
-    git config --global diff.tool nvimdiff
     git config --global difftool.prompt false
-    git config --global difftool.nvimdiff.layout "LOCAL,REMOTE"
-    git config --global merge.tool nvimdiff
     git config --global mergetool.prompt true
-    git config --global mergetool.nvimdiff.layout "LOCAL,BASE,REMOTE / MERGED"
     git config --global pull.ff only
     git config --global push.default simple
     echo "Git config was installed"
