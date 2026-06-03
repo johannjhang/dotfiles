@@ -150,6 +150,13 @@ end
 # } Python
 
 
+# Rust {
+if test -d $HOME/.cargo/bin
+    fish_add_path $HOME/.cargo/bin
+end
+# } Rust
+
+
 # Android SDK {
 if test -d $HOME/Android/Sdk
     set --export ANDROID_HOME $HOME/Android/Sdk
