@@ -183,6 +183,7 @@ install() {
         install_target "home/AppData/Local/nvim/lua/init-light.lua"
       fi
       install_target "home/AppData/Local/nvim/after/ftplugin/c.lua"
+      install_target "home/AppData/Local/nvim/after/ftplugin/cmake.lua"
       install_target "home/AppData/Local/nvim/after/ftplugin/cpp.lua"
       install_target "home/AppData/Local/nvim/after/ftplugin/gitcommit.lua"
       install_target "home/AppData/Local/nvim/after/ftplugin/markdown.lua"
@@ -196,6 +197,7 @@ install() {
         install_target "home/.config/nvim/lua/init-light.lua"
       fi
       install_target "home/.config/nvim/after/ftplugin/c.lua"
+      install_target "home/.config/nvim/after/ftplugin/cmake.lua"
       install_target "home/.config/nvim/after/ftplugin/cpp.lua"
       install_target "home/.config/nvim/after/ftplugin/gitcommit.lua"
       install_target "home/.config/nvim/after/ftplugin/markdown.lua"
@@ -317,6 +319,7 @@ uninstall() {
   uninstall_target "${HOME}/.config/nvim/lua/init-lazy.lua"
   uninstall_target "${HOME}/.config/nvim/lua/plugins/default.lua"
   uninstall_target "${HOME}/.config/nvim/after/ftplugin/c.lua"
+  uninstall_target "${HOME}/.config/nvim/after/ftplugin/cmake.lua"
   uninstall_target "${HOME}/.config/nvim/after/ftplugin/cpp.lua"
   uninstall_target "${HOME}/.config/nvim/after/ftplugin/gitcommit.lua"
   uninstall_target "${HOME}/.config/nvim/after/ftplugin/markdown.lua"
@@ -326,6 +329,7 @@ uninstall() {
   uninstall_target "${HOME}/Appdata/Local/nvim/lua/init-lazy.lua"
   uninstall_target "${HOME}/Appdata/Local/nvim/lua/plugins/default.lua"
   uninstall_target "${HOME}/Appdata/Local/nvim/after/ftplugin/c.lua"
+  uninstall_target "${HOME}/Appdata/Local/nvim/after/ftplugin/cmake.lua"
   uninstall_target "${HOME}/Appdata/Local/nvim/after/ftplugin/cpp.lua"
   uninstall_target "${HOME}/Appdata/Local/nvim/after/ftplugin/gitcommit.lua"
   uninstall_target "${HOME}/Appdata/Local/nvim/after/ftplugin/markdown.lua"
