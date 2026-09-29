@@ -64,6 +64,24 @@ end
 # } LS_COLORS
 
 
+# SSH {
+function __sync_env_from_tmux --on-event fish_prompt
+    set -q TMUX; or return
+
+    set -l env (tmux showenv 2>/dev/null)
+
+    for var in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT DISPLAY
+        # Pull "NAME=value" out of the captured lines; "-NAME" (removed)
+        # and absent vars yield nothing.
+        set -l tmux_val (string replace -rf '^'$var'=(.*)$' '$1' -- $env)
+
+        test -n "$tmux_val"; and test "$tmux_val" != "$$var"
+        and set -gx $var $tmux_val
+    end
+end
+# } SSH
+
+
 # fd-find {
 if type --query fdfind
     alias fd fdfind
