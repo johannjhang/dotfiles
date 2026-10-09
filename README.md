@@ -577,11 +577,18 @@ WezTerm uses the same leader key as tmux by my design, to provide a consistent u
 4. **Install this dotfiles**.
 
     ```
-    ./install.sh
+    ./install
+    ```
+
+    On Windows, run it with `bash` instead, since the file has no executable extension there:
+
+    ```
+    bash install
     ```
 
     Note 1: During the installation, if you don't know what to choose, just press enter using the default option.
     Note 2: You have Nerd Font support if you have followed the prerequisites.
+    Note 3: [WezTerm](https://wezterm.org/) is configured by this dotfiles and ready to use on Linux, macOS, and Windows after the installation.
 
 5. Reboot and reopen terminal.
 
@@ -783,7 +790,16 @@ WezTerm uses the same leader key as tmux by my design, to provide a consistent u
 
 ```
 cd ~/workspace/dotfiles
-./uninstall.sh
+./uninstall
+cd ..
+rm -rf dotfiles
+```
+
+On Windows, run the uninstaller with `bash` instead:
+
+```
+cd ~/workspace/dotfiles
+bash uninstall
 cd ..
 rm -rf dotfiles
 ```

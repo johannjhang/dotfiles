@@ -2,7 +2,7 @@
 
 set -e
 
-DOTFILES_DIR=$(cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P)
+DOTFILES_DIR=$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
 
 entry_point="$0"
 
