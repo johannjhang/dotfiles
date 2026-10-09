@@ -67,16 +67,19 @@ format = '[ $user]($style)'
 
 [directory]
 style = "bg:peach fg:crust"
+repo_root_style = "bold bg:peach fg:crust"
 format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+repo_root_format = "[ $before_root_path]($style)[$repo_root]($repo_root_style)[$path ]($style)"
+truncate_to_repo = false
+truncation_length = 0
+# truncation_symbol = "…/"
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
+# [directory.substitutions]
+# "Documents" = "󰈙 "
+# "Downloads" = " "
+# "Music" = "󰝚 "
+# "Pictures" = " "
+# "Developer" = "󰲋 "
 
 [git_branch]
 symbol = ""
