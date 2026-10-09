@@ -141,6 +141,8 @@ install() {
 
   install_target "home/.config/fish/conf.d/johannjhang.fish"
 
+  install_target "home/.config/starship.toml"
+
   if [ "$bg" = "light" ]; then
     install_target "home/.config/dircolors/dircolors.light" "${HOME}/.config/dircolors/dircolors"
   else
@@ -297,6 +299,8 @@ uninstall() {
   uninstall_target "${HOME}/.zshrc.light"
 
   uninstall_target "${HOME}/.config/fish/conf.d/johannjhang.fish"
+
+  uninstall_target "${HOME}/.config/starship.toml"
 
   uninstall_target "${HOME}/.wezterm.lua"
   uninstall_target "${HOME}/.config/wezterm/color_scheme"
