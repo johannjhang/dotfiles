@@ -47,6 +47,13 @@ end
 # } Homebrew
 
 
+# starship {
+if status --is-interactive; and type --query starship
+    starship init fish | source
+end
+# } starship
+
+
 # LS_COLORS {
 if test -r $HOME/.config/dircolors/dircolors
     if type --query gdircolors

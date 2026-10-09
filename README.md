@@ -50,7 +50,8 @@
 1. [fd](https://github.com/sharkdp/fd)
 2. [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 3. [ripgrep](https://github.com/BurntSushi/ripgrep)
-4. [zoxide](https://github.com/ajeetdsouza/zoxide)
+4. [starship](https://github.com/starship/starship)
+5. [zoxide](https://github.com/ajeetdsouza/zoxide)
 
 ### Fish
 
@@ -58,7 +59,7 @@
 
 #### Fish Plugins
 
-1. [IlanCosman/tide](https://github.com/IlanCosman/tide)
+1. [jorgebucaran/nvm.fish](https://github.com/jorgebucaran/nvm.fish)
 
 ### Neovim (nvim)
 
@@ -186,6 +187,12 @@ WezTerm uses the same leader key as tmux by my design, to provide a consistent u
     sudo apt install build-essential cmake git git-lfs golang tmux fontconfig python3 python3-dev python3-venv curl fd-find ripgrep fish exuberant-ctags trash-cli fzf xsel zoxide yapf3 clangd
     ```
 
+    Install [starship](https://starship.rs/):
+
+    ```
+    curl -sS https://starship.rs/install.sh | sh
+    ```
+
 2. Change default shell to [fish](https://fishshell.com) via `chsh`.
 
     Execute `chsh` then input `/usr/bin/fish`.
@@ -202,25 +209,7 @@ WezTerm uses the same leader key as tmux by my design, to provide a consistent u
     curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
     ```
 
-    1. Install [tide](https://github.com/IlanCosman/tide)
-
-        ```
-        fisher install johannjhang/tide
-        ```
-
-        Configure it:
-
-        ```
-        tide configure --auto --style=Rainbow --prompt_colors='16 colors' --show_time='24-hour format' --rainbow_prompt_separators=Round --powerline_prompt_heads=Round --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character and frame' --prompt_connection=Dotted --powerline_right_prompt_frame=No --prompt_spacing=Compact --icons='Many icons' --transient=No
-        ```
-
-        For non-Nerd-font environment, use this instead:
-
-        ```
-        tide configure --auto --style=Rainbow --prompt_colors='16 colors' --show_time='24-hour format' --rainbow_prompt_separators=Round --powerline_prompt_heads=Round --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character and frame' --prompt_connection=Dotted --powerline_right_prompt_frame=No --prompt_spacing=Compact --icons='Few icons' --transient=No
-        ```
-
-    2. Install [nvm.fish](https://github.com/jorgebucaran/nvm.fish)
+    1. Install [nvm.fish](https://github.com/jorgebucaran/nvm.fish)
 
         ```
         fisher install jorgebucaran/nvm.fish
@@ -296,7 +285,7 @@ WezTerm uses the same leader key as tmux by my design, to provide a consistent u
 2. Install necessary packages.
 
     ```
-    brew install coreutils bash fish fd ripgrep tmux neovim trash git-lfs cmake ctags go gotags pyenv zoxide yapf llvm
+    brew install coreutils bash fish fd ripgrep tmux neovim trash git-lfs cmake ctags go gotags pyenv zoxide yapf llvm starship
     ```
 
 4. Install [Nerd Fonts](https://www.nerdfonts.com/) patched [GitHub Next Monaspace](https://monaspace.githubnext.com/):
@@ -339,14 +328,7 @@ WezTerm uses the same leader key as tmux by my design, to provide a consistent u
     curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
     ```
 
-    1. Install [tide](https://github.com/IlanCosman/tide)
-
-        ```
-        fisher install johannjhang/tide
-        tide configure --auto --style=Rainbow --prompt_colors='16 colors' --show_time='24-hour format' --rainbow_prompt_separators=Round --powerline_prompt_heads=Round --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character and frame' --prompt_connection=Dotted --powerline_right_prompt_frame=No --prompt_spacing=Compact --icons='Many icons' --transient=No
-        ```
-
-    2. Install [nvm.fish](https://github.com/jorgebucaran/nvm.fish)
+    1. Install [nvm.fish](https://github.com/jorgebucaran/nvm.fish)
 
         ```
         fisher install jorgebucaran/nvm.fish
@@ -446,6 +428,7 @@ WezTerm uses the same leader key as tmux by my design, to provide a consistent u
         ```
         pacman -Sy man fish tmux
         pacman -Sy mingw-w64-ucrt-x86_64-clang
+        pacman -Sy mingw-w64-ucrt-x86_64-starship
         ```
 
 10. Configure Windows Terminal.
@@ -544,14 +527,7 @@ WezTerm uses the same leader key as tmux by my design, to provide a consistent u
         curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
         ```
 
-        1. Install [tide](https://github.com/IlanCosman/tide)
-
-            ```
-            fisher install johannjhang/tide
-            tide configure --auto --style=Rainbow --prompt_colors='16 colors' --show_time='24-hour format' --rainbow_prompt_separators=Round --powerline_prompt_heads=Round --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character and frame' --prompt_connection=Dotted --powerline_right_prompt_frame=No --prompt_spacing=Compact --icons='Many icons' --transient=No
-            ```
-
-       2. Install [nvm.fish](https://github.com/jorgebucaran/nvm.fish)
+        1. Install [nvm.fish](https://github.com/jorgebucaran/nvm.fish)
 
            ```
            fisher install jorgebucaran/nvm.fish
